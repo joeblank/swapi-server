@@ -91,7 +91,7 @@ module.exports = {
       for (let i = 0; i < planet.residents.length; i++) {
         try {
           const { data } = await axios.get(planet.residents[i]);
-          planet.residents[i] = data
+          planet.residents[i] = data.name
         } catch (e) {
           console.error(e);
         }
