@@ -1,12 +1,11 @@
-require('dotenv').config();
-
 // === Dependencies ===
+require('dotenv').config();
 const express = require('express');
 
 // === Controllers ===
 const swapiCtrl = require('./controllers/swapiCtrl');
 
-// === Destructure from .env file ===
+// === Destructure from env object ===
 const { SERVER_PORT } = process.env;
 
 // === Initialize express app ===

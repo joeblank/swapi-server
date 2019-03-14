@@ -81,9 +81,10 @@ module.exports = {
     /*
       Although I generally want to avoid nested loops, I am going to use a nested loop for the following reason:
       Under the assumption that if a character is the resident of one planet, they cannot be the resident of another, 
-      I will have to make an http request for each and every resident (with no duplications). Since each http request for
-      a certain character needs to happen, and will only happen once, I would argue that the code below has a Big O notation
-      closer to O(n) as opposed to something approaching O(n^2)...which would be more typical of nested loops.
+      I will only have to make one http request for each resident of the planets (with no duplications). Since each 
+      http request for a certain character needs to happen, and will only happen once, I would argue that the code 
+      below has a Big O notation closer to O(n) as opposed to something approaching O(n^2)...which would be more 
+      typical of nested loops.
     */
 
     for (const planet of planets) {
